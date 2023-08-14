@@ -4,7 +4,6 @@ let hitrn = 0;
 for(var i = 1; i<=160 ;i++){
     var Random = Math.floor(Math.random()*10)
     clutter += `<div class="bubble">${Random}</div>`;//pichla save rah do and save the next    
-    console.log(Random)
 }
 
 document.querySelector(".pbot").innerHTML = clutter;
@@ -44,11 +43,8 @@ function scoreInc(){
 // Jispr click karo ge woh elementpr event chalega,aur eventListner na mile pr event element k parebt pr dhundhega , waha bhi naa milne par event parent ke parent ke parentpr listner dhundega
 document.querySelector(".pbot").addEventListener("click",
 function btnb(details){
-    console.log("chale raha h")
     let bubbleValue = details.target.textContent
     bubbleValue =   Math.floor(Number(bubbleValue));
-    console.log(typeof(bubbleValue));
-    console.log(bubbleValue)
     if (bubbleValue === hitrn ) {
         scoreInc();
         makebubble();
